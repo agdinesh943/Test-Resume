@@ -209,7 +209,8 @@ app.post('/generate-pdf', async (req, res) => {
 
         // Use production URL if not on localhost, otherwise use localhost
         const baseUrl = isProduction
-            ? 'https://resume-maker-3-4n85.onrender.com'
+            // ? 'https://resume-maker-3-4n85.onrender.com'
+            ? 'https://test-resume-1akf.onrender.com'
             : 'http://localhost:3000';
 
         let cssContent = fs.readFileSync(cssPath, 'utf8');
@@ -407,7 +408,8 @@ app.get('/api/debug', (req, res) => {
         __dirname: __dirname,
         nodeEnv: process.env.NODE_ENV,
         baseUrl: process.env.NODE_ENV === 'production'
-            ? 'https://resume-maker-3-4n85.onrender.com'
+            // ? 'https://resume-maker-3-4n85.onrender.com'
+            ? 'https://test-resume-1akf.onrender.com'
             : 'http://localhost:3000',
         files: {
             template: {
